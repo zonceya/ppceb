@@ -1,0 +1,211 @@
+/* Your existing CSS - kept intact */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+/* ===== NEW CUSTOM STYLES FOR PPECB ASSESSMENT ===== */
+
+/* Product image thumbnails */
+.product-image-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    padding: 2px;
+    background-color: #f8f9fa;
+}
+
+.product-image-large {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    padding: 5px;
+}
+
+/* Category cards */
+.category-card {
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+    .category-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+/* Table enhancements */
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Alert messages */
+.alert {
+    border-radius: 8px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Product code badge */
+.product-code {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.category-code {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* Price styling */
+.product-price {
+    font-weight: bold;
+    color: #198754;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Form validation */
+.field-validation-error {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 4px;
+    display: block;
+}
+
+.input-validation-error {
+    border-color: #dc3545;
+}
+
+/* Dashboard cards */
+.dashboard-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+    .dashboard-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .dashboard-card h3 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+/* Responsive table for mobile */
+@media (max-width: 768px) {
+    .table-responsive-mobile {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .product-image-thumb {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn-sm {
+        padding: 2px 6px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Loading spinner */
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #0d6efd;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Filter bar */
+.filter-bar {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 50px;
+    color: #6c757d;
+}
+
+    .empty-state i {
+        font-size: 48px;
+        margin-bottom: 15px;
+        opacity: 0.5;
+    }

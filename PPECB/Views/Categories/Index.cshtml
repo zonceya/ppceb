@@ -1,0 +1,47 @@
+﻿@model List<PPECB.Domain.Entities.Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<h2>Categories</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<p>
+    <a href="/Categories/Create" class="btn btn-primary">Create New Category</a>
+</p>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">No categories yet. Click "Create New Category" to add one.</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Active</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td><span class="category-code">@category.CategoryCode</span></td>
+                    <td>@category.Name</td>
+                    <td>@(category.IsActive ? "Yes" : "No")</td>
+                    <td>
+                        <a href="/Categories/Edit/@category.Id" class="btn btn-sm btn-warning">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

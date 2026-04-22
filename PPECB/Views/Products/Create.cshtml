@@ -1,0 +1,51 @@
+﻿@model PPECB.Domain.Entities.Product
+
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<h2>Create Product</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" required />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" type="number" step="0.01" required />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="CategoryId"></label>
+        <select asp-for="CategoryId" class="form-control" required>
+            <option value="">Select Category</option>
+            @foreach (var cat in ViewBag.Categories)
+            {
+                <option value="@cat.Id">@cat.Name (@cat.CategoryCode)</option>
+            }
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label>Product Image</label>
+        <input type="file" name="image" class="form-control-file" accept="image/*" />
+        <small class="text-muted">Max 2MB. Allowed: JPG, PNG, GIF</small>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a href="/Products" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

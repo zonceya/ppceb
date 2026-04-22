@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="PPECB.API/PPECB.API.csproj" Id="b1bdf2f8-1006-477d-8db7-31e2daebd93b" />
+  <Project Path="PPECB.Data/PPECB.Data.csproj" Id="3544a2f3-c6a8-487b-857f-60127c29f5b0" />
+  <Project Path="PPECB.Domain/PPECB.Domain.csproj" Id="6b3f7de2-6d25-44d2-80b4-47a77c6e39ac" />
+  <Project Path="PPECB.Services/PPECB.Services.csproj" Id="43ef2ce4-6899-4e0d-b8e7-7af8e33276ee" />
+  <Project Path="PPECB/PPECB.csproj" />
+</Solution>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+		<PackageReference Include="EPPlus" Version="6.2.10" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\PPECB.Domain\PPECB.Domain.csproj" />
+		<ProjectReference Include="..\PPECB.Data\PPECB.Data.csproj" />
+	</ItemGroup>
+
+</Project>
